@@ -7,15 +7,70 @@
 body {
     font-family: var(--main-font);
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+}
+
+img {
+    display: block;
+}
+
+.list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.container {
+    width: 1200px;
+    padding: 0 15px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.section {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
 /* ======= COMPONENTS ======= */
 
 .modal-btn {
+    width: 164px;
+    border: 1px solid var(--main-color);
+    border-radius: 25px;
+    padding: 12px 10px;
     font-weight: 600;
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.09em;
     text-transform: uppercase;
     /* color: #FFFFFF; */
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+    background-color: var(--main-color);
+    color: #fff;
 }
 
 .address {
@@ -41,6 +96,7 @@ body {
     line-height: 1.667;
     letter-spacing: 0.02em;
     color: #555555;
+    margin-top: 20px;
 }
 .undertitle {
     font-weight: 600;
@@ -48,6 +104,7 @@ body {
     line-height: 1.364;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 .undertitle-light-theme,
@@ -65,6 +122,33 @@ body {
 /* ======= END COMPONENT ======= */
 
 /* ======= HEADER ======= */
+.header .container {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+}
+
+.navigation {
+    display: flex;   
+}
+
+.navigation-list {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-list-item:not(:last-child) {
+    margin-right: 41px;
+}
+
+.navigation-logo {
+    margin-right: 70px;
+}
+
+.header .address {
+    margin-left: auto;
+    margin-right: 41px;
+}
 
 .navigation-list-link,
 .adress-phone-number {
@@ -86,6 +170,27 @@ body {
 
 /* ======= HERO ======= */
 
+.hero .container {
+    display: flex;
+}
+
+.social-links {
+    display: flex;
+    width: 100px;
+}
+
+.social-links__item:not(:last-child){
+    margin-right: 40px;
+}
+
+.hero__right-side {
+    flex-grow: 1;
+    padding-left: 100px;
+    padding-top: 272px;
+    padding-bottom: 206px;
+    background-color: #ccc;
+}
+
 .main-header {
     font-family: var(--secondary-font);
     font-weight: 700;
@@ -97,11 +202,38 @@ body {
 
 .hero .description {
     color: #9DA4BD;
+    width: 363px;
 }
 
 /* ======= END HERO ======= */
 
 /* ======= ABOUT ======= */
+
+.about .container {
+    display: flex;
+}
+
+.about__img-list {
+    display: flex;
+}
+
+.about__img-list-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.about__right-side {
+    padding-left: 64px;
+    width: 555px;
+}
+
+.about .description {
+    margin-bottom: 20px;
+}
+
+.about__right-side-description {
+    margin-bottom: 40px;
+}
+
 .secondary-header {
     font-family: var(--secondary-font);
     font-weight: 700;
@@ -119,6 +251,35 @@ body {
 /* ======= END ABOUT ======= */
 
 /* ======= SERVICES ======= */
+
+.services-list-wrapper {
+    display: flex;
+    margin-bottom: 46px;
+}
+.services .secondary-header {
+    margin-bottom: 44px;
+}
+
+.services-list {
+    width: 50%;
+    padding: 30px 40px;
+    border: 1px solid #000000
+}
+
+.services-list-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services-list-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.services .modal-btn {
+    display: block;
+    margin: 0 auto;
+}
+
 .services-list-item-name,
 .services-list-item-price  {
     font-weight: 400;
@@ -130,6 +291,40 @@ body {
 /* ======= END SERVICES ======= */
 
 /* ======= WHY US ======= */
+
+.why-us .container {
+    display: flex;
+}
+.why-us__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.why-us__list-item {
+    border: 1px solid #000;
+}
+
+.why-us__list-item:nth-child(odd) {
+    margin-right: 30px;
+}
+
+.why-us__list-item:nth-child(2n) {
+    margin-top: 38px;
+}
+
+.why-us__left-side {
+    width: 469px;
+}
+
+.why-us__list-item {
+    width: 170px;
+    padding: 20px 24px;
+}
+
+.why-us__right-side {
+    margin-left: 130px;
+}
 
 .why-us__list-counter {
     font-weight: 700;
@@ -151,6 +346,23 @@ body {
 /* ======= END WHY US ======= */
 
 /* ======= BARBERS ======= */
+.barbers .secondary-header {
+    margin-bottom: 44px;
+}
+.barbers__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.barbers__list-photo,
+.barbers__list-job {
+    margin-bottom: 30px;
+}
+
+.barbers__list-name {
+    margin-bottom: 8px;
+}
+
 .barbers__list-name {
     font-weight: 400;
     font-size: 18px;
@@ -172,6 +384,16 @@ body {
 /* ======= END BARBERS ======= */
 
 /* ======= GALLERY ======= */
+
+.gallery .undertitle {
+    margin-bottom: 40px;
+}
+
+.gallery__list {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* ======= END GALLERY ======= */
 
 /* ======= CONTACT ======= */
@@ -191,6 +413,16 @@ body {
 /* ======= END CONTACT ======= */
 
 /* ======= FOOTER ======= */
+
+.section-wrapper {
+    padding-top: 56px;
+    padding-bottom: 56px;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+}
 
 .footer__copy {
     font-weight: 600;
