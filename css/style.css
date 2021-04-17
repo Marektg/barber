@@ -15,6 +15,7 @@ h4,
 h5,
 h6 {
     margin: 0;
+    padding: 0;
 }
 
 ul,
@@ -25,6 +26,7 @@ ol {
 
 p {
     padding: 0;
+    margin: 0;
 }
 
 img {
@@ -176,6 +178,9 @@ img {
 
 .social-links {
     display: flex;
+}
+
+.hero__left-side {
     width: 100px;
 }
 
@@ -191,6 +196,11 @@ img {
     background-color: #ccc;
 }
 
+.hero .description {
+    color: #9DA4BD;
+    width: 363px;
+}
+
 .main-header {
     font-family: var(--secondary-font);
     font-weight: 700;
@@ -198,11 +208,6 @@ img {
     line-height: 1.181;
     letter-spacing: 0.05em;
     /* color: #FFFFFF; */
-}
-
-.hero .description {
-    color: #9DA4BD;
-    width: 363px;
 }
 
 /* ======= END HERO ======= */
@@ -295,34 +300,36 @@ img {
 .why-us .container {
     display: flex;
 }
+
+.why-us__left-side {
+    width: 470px;
+    flex-shrink: 0;
+    padding-left: 100px;
+}
+
 .why-us__list {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-}
-
-.why-us__list-item {
-    border: 1px solid #000;
-}
-
-.why-us__list-item:nth-child(odd) {
-    margin-right: 30px;
-}
-
-.why-us__list-item:nth-child(2n) {
-    margin-top: 38px;
-}
-
-.why-us__left-side {
-    width: 469px;
+    align-items: flex-start;
 }
 
 .why-us__list-item {
     width: 170px;
-    padding: 20px 24px;
+    min-height: 133px;
+    border: 1px solid #000;
+    padding: 20px 26px;
+}
+
+.why-us__list-item:not(:nth-child(even)) {
+    margin-right: 30px;
+}
+
+.why-us__list-item:nth-child(even) {
+    margin-top: 30px;
 }
 
 .why-us__right-side {
+    width: 470px;
     margin-left: 130px;
 }
 
@@ -333,6 +340,7 @@ img {
     text-align: center;
     letter-spacing: 0.05em;
     color: #303030;
+    margin-bottom: 6px;
 }
 .why-us__list-text {
     font-weight: 600;
@@ -353,16 +361,11 @@ img {
     display: flex;
     justify-content: space-between;
 }
-
-.barbers__list-photo,
-.barbers__list-job {
-    margin-bottom: 30px;
+.barbers__content-wrapper {
+    padding-top: 30px;
+    padding-left: 82px;
+    padding-right: 82px;
 }
-
-.barbers__list-name {
-    margin-bottom: 8px;
-}
-
 .barbers__list-name {
     font-weight: 400;
     font-size: 18px;
@@ -370,6 +373,7 @@ img {
     text-align: center;
     letter-spacing: 0.02em;
     color: #303030;
+    margin-bottom: 8px;
 }
 
 .barbers__list-job {
@@ -386,7 +390,7 @@ img {
 /* ======= GALLERY ======= */
 
 .gallery .undertitle {
-    margin-bottom: 40px;
+    margin-bottom: 44px;
 }
 
 .gallery__list {
@@ -414,9 +418,8 @@ img {
 
 /* ======= FOOTER ======= */
 
-.section-wrapper {
-    padding-top: 56px;
-    padding-bottom: 56px;
+.footer {
+    padding: 56px 0;
 }
 
 .footer .container {
