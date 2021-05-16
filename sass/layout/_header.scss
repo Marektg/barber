@@ -1,0 +1,57 @@
+.header {
+  position: absolute;
+  width: 100%;
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation-list {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-list-item {
+  &:not(:last-child) {
+    margin-right: 41px;
+  }
+}
+
+.navigation-logo {
+  margin-right: 70px;
+}
+
+.header .address {
+  margin-left: auto;
+  margin-right: 41px;
+}
+
+.navigation-list-link {
+  transition: color 250ms linear;
+
+  &:hover,
+  &:focus {
+    color: var(--main-color);
+    
+  }
+}
+
+.navigation-list-link,
+.adress-phone-number {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.333;
+  letter-spacing: 0.1em;
+  color: #FFFFFF; 
+}
+
+.adress-phone-number {
+  transition: color 250ms linear;
+
+  &:hover,
+  &:focus {
+    color: var(--main-color);
+    
+  }
+}

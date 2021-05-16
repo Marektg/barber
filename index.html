@@ -15,7 +15,7 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="">
 
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/main.min.css" />
 </head>
 
 <body>
@@ -43,7 +43,7 @@
         </ul>
       </nav>
       <address class="address"><a class="adress-phone-number link" href="tel:48111111111">+48 111 111 111</a></address>
-      <button class="modal-btn modal-btn-dark" type="button" data-modal-open>REJESTRACJA ONLINE</button>
+      <button class="modal-btn modal-btn_dark" type="button" data-modal-open>REJESTRACJA ONLINE</button>
     </div>
   </header>
 
@@ -157,7 +157,7 @@
             </li>
           </ul>
         </div>
-        <button class="modal-btn modal-btn-dark" type="button">ONLINE-REJESTRACJA</button>
+        <button class="modal-btn modal-btn_dark" type="button">ONLINE-REJESTRACJA</button>
       </div>
     </section>
 
@@ -389,9 +389,30 @@
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
       <button type="button" class="close-btn" data-modal-close>X</button>
-      <form class="modal-form" action="#" method="post">
-        <input class="modal-form-policy visually-hidden" id="user-policy" type="checkbox" name="policy">
-        <label for="user-policy" class="modal-form-policy-text"> Oświadczam iż akceptuję Regulamin.</label>
+      <form action="#" class="modal__form">
+        <label class="modal__form-field">
+          Imie
+          <span class="modal__form-input-wrapper">
+            <input type="text" name="user_name" class="modal__form-input">
+            <span class="modal__form-icon"></span>
+          </span>
+        </label>
+        <label class="modal__form-field">
+          Telefon
+          <span class="modal__form-input-wrapper">
+            <input type="tel" name="user_tel" class="modal__form-input">
+            <span class="modal__form-icon"></span>
+          </span>
+        </label>
+        <label class="modal__form-field">
+          Komentarz
+          <textarea class="modal__form-message" name="user_message" placeholder="Napisz Komentarz"></textarea>
+        </label>
+        <input id="user-policy" type="checkbox" name="user_policy" value="accept-policy"
+          class="modal__form-policy visually-hidden">
+        <label for="user-policy" class="modal__form-policy-text">Oświadczam i akceptuje <a
+            href="#">Regulamin.</a></label>
+        <button type="submit" class="modal__form-btn">Wyślij</button>
       </form>
     </div>
   </div>

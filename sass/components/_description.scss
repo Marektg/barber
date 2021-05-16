@@ -1,0 +1,17 @@
+.description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.667;
+  letter-spacing: 0.02em;
+  color: #555555;
+  margin-top: 20px;
+
+  .about & {
+    margin-bottom: 20px;
+  }
+
+  .hero & {
+    color: #9da4bd;
+    width: 363px;
+  }
+}

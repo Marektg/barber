@@ -1,0 +1,26 @@
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  align-items: center;
+  margin: 0 auto;
+
+  .about &,
+  .hero &,
+  .why-us & {
+    display: flex;
+  }
+  
+  .footer & {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .header & {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+  }
+  
+  
+}
+
