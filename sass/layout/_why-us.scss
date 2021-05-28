@@ -1,0 +1,64 @@
+
+.why-us__left-side {
+  width: 470px;
+  flex-shrink: 0;
+  padding-left: 100px;
+}
+
+.why-us__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.why-us__list-item {
+  width: 170px;
+  min-height: 133px;
+  padding: 20px 26px;
+  background-color: #F7F7F7;
+
+  &:not(:nth-child(even)) {
+    margin-right: 30px;
+  }
+  
+  &:nth-child(even) {
+    margin-top: 30px;
+  }
+  
+}
+
+.why-us__right-side {
+  width: 470px;
+  margin-left: 130px;
+}
+
+.why-us__list-counter {
+  position: relative;
+  width: max-content;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.357;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #303030;
+  margin: 0 auto;
+  margin-bottom: 6px;
+
+  &::after {
+    position: absolute;
+    top: 12px;
+    right: -10px;
+    content: "";
+    width: 9px;
+    height: 9px;
+    background-image: url(../images/why-us/plus.svg); 
+  }
+}
+
+.why-us__list-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.364;
+  text-align: center;
+  color: #303030;
+}
